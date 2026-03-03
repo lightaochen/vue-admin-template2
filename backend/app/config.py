@@ -1,10 +1,6 @@
 # app/config.py
 import os
 
-class git_test:
-    aaaaaa = 1
-
-
 class BaseConfig:
     JSON_AS_ASCII = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
