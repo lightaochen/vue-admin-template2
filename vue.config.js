@@ -30,14 +30,19 @@ module.exports = {
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
   devServer: {
-    port: port,
+    port: 9529,
     open: true,
-    overlay: {
-      warnings: false,
-      errors: true
-    },
-    before: require('./mock/mock-server.js')
-  },
+    overlay: { warnings: false, errors: true },
+    proxy: {
+      '^/dev-api': {                 // 用正则锚定前缀更稳
+        target: 'http://127.0.0.1:8080', // 你的 Flask 后端
+        changeOrigin: true,
+        ws: false,
+        secure: false,
+        pathRewrite: { '^/dev-api': '' } // /dev-api/user/login -> /user/login
+      }
+    }
+},
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.

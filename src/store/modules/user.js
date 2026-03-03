@@ -6,12 +6,17 @@ const getDefaultState = () => {
   return {
     token: getToken(),
     name: '',
-    avatar: ''
+    avatar: '',
+    roles: []
   }
 }
 
 const state = getDefaultState()
 
+// 管理的用户状态
+// token 登录凭证
+// name/avator 展示用
+// roles 权限，用来筛选asyncRoutes
 const mutations = {
   RESET_STATE: (state) => {
     Object.assign(state, getDefaultState())
@@ -24,11 +29,14 @@ const mutations = {
   },
   SET_AVATAR: (state, avatar) => {
     state.avatar = avatar
-  }
+  },
+  SET_ROLES: (state, roles) => { state.roles = roles || [] }
 }
 
+// 动作
 const actions = {
   // user login
+  // 调用 api/user.login
   login({ commit }, userInfo) {
     const { username, password } = userInfo
     return new Promise((resolve, reject) => {
@@ -53,10 +61,11 @@ const actions = {
           return reject('Verification failed, please Login again.')
         }
 
-        const { name, avatar } = data
+        const { name, avatar, roles } = data
 
         commit('SET_NAME', name)
         commit('SET_AVATAR', avatar)
+        commit('SET_ROLES', Array.isArray(roles) ? roles : [])
         resolve(data)
       }).catch(error => {
         reject(error)

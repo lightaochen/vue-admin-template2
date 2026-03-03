@@ -1,4 +1,6 @@
+// 指向src/router/index.js
 import router from './router'
+// 指向src/store/index.js
 import store from './store'
 import { Message } from 'element-ui'
 import NProgress from 'nprogress' // progress bar
@@ -6,10 +8,11 @@ import 'nprogress/nprogress.css' // progress bar style
 import { getToken } from '@/utils/auth' // get token from cookie
 import getPageTitle from '@/utils/get-page-title'
 
-NProgress.configure({ showSpinner: false }) // NProgress Configuration
+NProgress.configure({ showSpinner: false }) // 页面顶部的加载进度条, NProgress Configuration
 
-const whiteList = ['/login'] // no redirect whitelist
-
+// const whiteList = ['/login'] // no redirect whitelist
+const whiteList = ['/login', '/404']
+// 路由守卫: 每次路由切换之前都会执行这里的逻辑
 router.beforeEach(async(to, from, next) => {
   // start progress bar
   NProgress.start()
@@ -25,8 +28,9 @@ router.beforeEach(async(to, from, next) => {
       // if is logged in, redirect to the home page
       next({ path: '/' })
       NProgress.done()
-    } else {
-      const hasGetUserInfo = store.getters.name
+    } else { // 去其他路由
+      // const hasGetUserInfo = store.getters.name
+      const hasGetUserInfo = store.state.user.name
       if (hasGetUserInfo) {
         next()
       } else {
@@ -46,7 +50,7 @@ router.beforeEach(async(to, from, next) => {
     }
   } else {
     /* has no token*/
-
+    // 如果在白名单内，直接放行
     if (whiteList.indexOf(to.path) !== -1) {
       // in the free login whitelist, go directly
       next()
@@ -59,6 +63,6 @@ router.beforeEach(async(to, from, next) => {
 })
 
 router.afterEach(() => {
-  // finish progress bar
+  // 路由结束时， finish progress bar
   NProgress.done()
 })

@@ -1,84 +1,79 @@
+// src/utils/request.js
 import axios from 'axios'
-import { MessageBox, Message } from 'element-ui'
+import { MessageBox } from 'element-ui'
 import store from '@/store'
 import { getToken } from '@/utils/auth'
 
-// create an axios instance
 const service = axios.create({
-  baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
-  // withCredentials: true, // send cookies when cross-domain requests
-  timeout: 5000 // request timeout
+  baseURL: process.env.VUE_APP_BASE_API, // .env.development => /dev-api
+  timeout: 120000, // ← 30s，避免重统计接口超时
+  headers: { Accept: 'application/json' }
 })
 
-// request interceptor
+// ===== 请求拦截 =====
 service.interceptors.request.use(
   config => {
-    // do something before request is sent
-
-    if (store.getters.token) {
-      // let each request carry token
-      // ['X-Token'] is a custom headers key
-      // please modify it according to the actual situation
-      config.headers['X-Token'] = getToken()
+    if (process.env.NODE_ENV !== 'production') {
+      // 打印下最终会发出的完整路径（便于排查代理问题）
+      // 注意：此时还未拼接 baseURL，仅打印相对路径
+      console.log('[REQ]', service.defaults.baseURL, config.method?.toUpperCase(), config.url, config.params || config.data || '')
     }
+
+    // 代理到后端时，如果 baseURL 是 /dev-api，而 url 又以 /api/ 开头，去掉 /api 以兼容你后端两种路由写法
+    if (service.defaults.baseURL === '/dev-api' && /^\/api\//.test(config.url)) {
+      config.url = config.url.replace(/^\/api/, '')
+    }
+    // 避免产生 // 双斜杠
+    config.url = config.url.replace(/\/{2,}/g, '/')
+
+    // 携带 token
+    const token = getToken()
+    if (token) {
+      config.headers['X-Token'] = token
+    }
+
     return config
   },
-  error => {
-    // do something with request error
-    console.log(error) // for debug
-    return Promise.reject(error)
-  }
+  error => Promise.reject(error)
 )
 
-// response interceptor
+// ===== 响应拦截 =====
 service.interceptors.response.use(
-  /**
-   * If you want to get http information such as headers or status
-   * Please return  response => response
-  */
-
-  /**
-   * Determine the request status by custom code
-   * Here is just an example
-   * You can also judge the status by HTTP Status Code
-   */
   response => {
-    const res = response.data
+    const res = response.data // 形如 { code, data, message }
 
-    // if the custom code is not 20000, it is judged as an error.
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('[RES]', response.config.url, res)
+    }
+
+    // 你后端的成功码是 20000
     if (res.code !== 20000) {
-      Message({
-        message: res.message || 'Error',
-        type: 'error',
-        duration: 5 * 1000
-      })
-
-      // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
+      // 只对 token 相关错误弹框，其它错误交给页面 catch 显示
       if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-        // to re-login
-        MessageBox.confirm('You have been logged out, you can cancel to stay on this page, or log in again', 'Confirm logout', {
-          confirmButtonText: 'Re-Login',
-          cancelButtonText: 'Cancel',
+        MessageBox.confirm('登录状态已失效，请重新登录', '提示', {
+          confirmButtonText: '重新登录',
+          cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          store.dispatch('user/resetToken').then(() => {
-            location.reload()
-          })
+          store.dispatch('user/resetToken').then(() => location.reload())
         })
       }
-      return Promise.reject(new Error(res.message || 'Error'))
-    } else {
-      return res
+      return Promise.reject(new Error(res.message || '请求失败'))
     }
+
+    // ✅ 保持返回 { code, data, message }，页面用 res.data 解包
+    // 如果你更喜欢直接返回 data，也可以改成：return res.data
+    return res
   },
   error => {
-    console.log('err' + error) // for debug
-    Message({
-      message: error.message,
-      type: 'error',
-      duration: 5 * 1000
-    })
-    return Promise.reject(error)
+    // 尽量把后端 message 透传出来
+    const backend = error?.response?.data
+    const msg = backend?.message || error.message || '网络错误'
+    if (process.env.NODE_ENV !== 'production') {
+      console.error('[ERR]', error?.config?.url, msg, backend || '')
+    }
+    // 透传后端结构，方便页面按需处理
+    return Promise.reject(backend || { message: msg })
   }
 )
 

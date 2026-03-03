@@ -1,0 +1,95 @@
+2025-10-10 09:09:31 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3288, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 1268, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 169, in _do_get
+    self._dec_overflow()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "192.168.1.67", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 145, in <module>
+    ts_crud = TimescaleCRUD(DATABASE_URL, pool_size=20, max_overflow=0)
+  File "E:\vue-admin-template\backend\tools\timescaleManager.py", line 25, in __init__
+    Base.metadata.create_all(self.engine)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\sql\schema.py", line 5796, in create_all
+    bind._run_ddl_visitor(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3238, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3228, in begin
+    with self.connect() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3264, in connect
+    return self._connection_cls(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 2426, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3288, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 1268, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 169, in _do_get
+    self._dec_overflow()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "192.168.1.67", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

@@ -1,0 +1,999 @@
+2025-08-29 13:59:15 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 16, in <module>
+    from tradeAssistantSpread import (
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 823, in <module>
+    def _parse_contract_yyyymm(instrument_id: str) -> int | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-08-29 14:01:11 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 17, in <module>
+    from tradeAssistantSpread import (
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 823, in <module>
+    def _parse_contract_yyyymm(instrument_id: str) -> int | None:
+TypeError: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-08-29 14:15:09 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 46, in <module>
+    ts_crud = TimescaleCRUD(DATABASE_URL)
+  File "E:\vue-admin-template\backend\tools\timescaleManager.py", line 25, in __init__
+    Base.metadata.create_all(self.engine)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\sql\schema.py", line 5796, in create_all
+    bind._run_ddl_visitor(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3238, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3228, in begin
+    with self.connect() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3264, in connect
+    return self._connection_cls(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3288, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 1268, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 169, in _do_get
+    self._dec_overflow()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+KeyboardInterrupt
+2025-08-29 14:15:52 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 18, in <module>
+    from tradeAssistantSpread import (
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 17, in <module>
+    import matplotlib.pyplot as plt
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\pyplot.py", line 55, in <module>
+    import matplotlib.colorbar
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\colorbar.py", line 19, in <module>
+    from matplotlib import _api, cbook, collections, cm, colors, contour, ticker
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\collections.py", line 1008, in <module>
+    class PathCollection(_CollectionWithSizes):
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\artist.py", line 150, in __init_subclass__
+    cls._update_set_signature_and_docstring()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\artist.py", line 178, in _update_set_signature_and_docstring
+    + kwdoc(cls))
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\artist.py", line 1858, in kwdoc
+    'Properties:\n' + '\n'.join(ai.pprint_setters(leadingspace=4)))
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\artist.py", line 1619, in pprint_setters
+    accepts = self.get_valid_values(prop)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\matplotlib\artist.py", line 1493, in get_valid_values
+    match = self._get_valid_values_regex.search(docstring)
+KeyboardInterrupt
+2025-08-29 14:16:34 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 14:16:34 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 14:16:34 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 14:16:43 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:16:43 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:16:43 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:16:44 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:16:44 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:16:44 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:16:44 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:16:44 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:16:44 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:16:44 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:16:44 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:16:44 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:16:44 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:16:44 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:16:44 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:16:44 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:16:44 - ERROR - ❌ compute_spread_leg_correlation 计算失败: 错误='float' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 697, in compute_spread_leg_correlation
+    "spread_vs_leg1": spread_diff.corr(leg1_diff),
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\series.py", line 2723, in corr
+    return nanops.nancorr(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 96, in _f
+    return f(*args, **kwargs)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1614, in nancorr
+    return f(a, b)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1637, in func
+    return np.corrcoef(a, b)[0, 1]
+  File "<__array_function__ internals>", line 200, in corrcoef
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2846, in corrcoef
+    c = cov(x, y, rowvar, dtype=dtype)
+  File "<__array_function__ internals>", line 200, in cov
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2681, in cov
+    avg, w_sum = average(X, axis=1, weights=w, returned=True)
+  File "<__array_function__ internals>", line 200, in average
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 555, in average
+    if scl.shape != avg_as_array.shape:
+AttributeError: 'float' object has no attribute 'shape'
+2025-08-29 14:16:44 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:16:45 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:16:45 - ERROR - spread today dashboard failed: product=cu, day=2025-08-28, err=name 'np' is not defined
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 314, in api_spread_today_dashboard
+    min_s = float(np.floor(np.nanmin(spread) / tick) * tick)
+NameError: name 'np' is not defined
+2025-08-29 14:17:14 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 14:17:14 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 14:17:14 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:17:14 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:17:14 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:17:14 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:17:14 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 14:17:14 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:17:14 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 14:17:14 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:17:14 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:17:14 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:17:14 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:17:14 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:17:14 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:17:14 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:17:14 - ERROR - ❌ compute_spread_leg_correlation 计算失败: 错误='float' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 697, in compute_spread_leg_correlation
+    "spread_vs_leg1": spread_diff.corr(leg1_diff),
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\series.py", line 2723, in corr
+    return nanops.nancorr(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 96, in _f
+    return f(*args, **kwargs)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1614, in nancorr
+    return f(a, b)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1637, in func
+    return np.corrcoef(a, b)[0, 1]
+  File "<__array_function__ internals>", line 200, in corrcoef
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2846, in corrcoef
+    c = cov(x, y, rowvar, dtype=dtype)
+  File "<__array_function__ internals>", line 200, in cov
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2681, in cov
+    avg, w_sum = average(X, axis=1, weights=w, returned=True)
+  File "<__array_function__ internals>", line 200, in average
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 555, in average
+    if scl.shape != avg_as_array.shape:
+AttributeError: 'float' object has no attribute 'shape'
+2025-08-29 14:17:14 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 14:17:14 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 14:17:14 - ERROR - spread today dashboard failed: product=cu, day=2025-08-27, err=name 'np' is not defined
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 314, in api_spread_today_dashboard
+    min_s = float(np.floor(np.nanmin(spread) / tick) * tick)
+NameError: name 'np' is not defined
+2025-08-29 14:25:15 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 14:25:15 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 14:25:15 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:25:15 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:25:15 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:25:15 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:25:15 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 14:25:15 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:25:15 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 14:25:15 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:25:15 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:25:15 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:25:15 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:25:15 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:25:15 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:25:15 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:25:15 - INFO - time
+2025-08-26 14:55:00+08:00        NaN
+2025-08-26 21:06:00+08:00    180.000
+2025-08-26 21:07:00+08:00    -10.000
+2025-08-26 21:08:00+08:00     30.000
+2025-08-26 21:09:00+08:00     20.000
+                              ...   
+2025-08-27 14:51:00+08:00    -20.000
+2025-08-27 14:52:00+08:00     -5.000
+2025-08-27 14:53:00+08:00    -15.000
+2025-08-27 14:54:00+08:00      0.000
+2025-08-27 14:55:00+08:00      0.000
+Length: 446, dtype: object, time
+2025-08-26 14:55:00+08:00        NaN
+2025-08-26 21:06:00+08:00    165.000
+2025-08-26 21:07:00+08:00      0.000
+2025-08-26 21:08:00+08:00     30.000
+2025-08-26 21:09:00+08:00      5.000
+                              ...   
+2025-08-27 14:51:00+08:00    -30.000
+2025-08-27 14:52:00+08:00      0.000
+2025-08-27 14:53:00+08:00    -15.000
+2025-08-27 14:54:00+08:00     -5.000
+2025-08-27 14:55:00+08:00      0.000
+Length: 446, dtype: object
+2025-08-29 14:25:15 - INFO - time
+2025-08-26 14:55:00+08:00     NaN
+2025-08-26 21:06:00+08:00    10.0
+2025-08-26 21:07:00+08:00   -10.0
+2025-08-26 21:08:00+08:00     0.0
+2025-08-26 21:09:00+08:00    20.0
+                             ... 
+2025-08-27 14:51:00+08:00    10.0
+2025-08-27 14:52:00+08:00     0.0
+2025-08-27 14:53:00+08:00     0.0
+2025-08-27 14:54:00+08:00     0.0
+2025-08-27 14:55:00+08:00     0.0
+Name: spread, Length: 446, dtype: float64
+2025-08-29 14:25:15 - ERROR - ❌ compute_spread_leg_correlation 计算失败: 错误='float' object has no attribute 'shape'
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\tradeAssistantSpread.py", line 699, in compute_spread_leg_correlation
+    "spread_vs_leg1": spread_diff.corr(leg1_diff),
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\series.py", line 2723, in corr
+    return nanops.nancorr(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 96, in _f
+    return f(*args, **kwargs)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1614, in nancorr
+    return f(a, b)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\pandas\core\nanops.py", line 1637, in func
+    return np.corrcoef(a, b)[0, 1]
+  File "<__array_function__ internals>", line 200, in corrcoef
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2846, in corrcoef
+    c = cov(x, y, rowvar, dtype=dtype)
+  File "<__array_function__ internals>", line 200, in cov
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 2681, in cov
+    avg, w_sum = average(X, axis=1, weights=w, returned=True)
+  File "<__array_function__ internals>", line 200, in average
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\numpy\lib\function_base.py", line 555, in average
+    if scl.shape != avg_as_array.shape:
+AttributeError: 'float' object has no attribute 'shape'
+2025-08-29 14:25:15 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 14:25:16 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 14:25:16 - ERROR - spread today dashboard failed: product=cu, day=2025-08-27, err=name 'np' is not defined
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 314, in api_spread_today_dashboard
+    min_s = float(np.floor(np.nanmin(spread) / tick) * tick)
+NameError: name 'np' is not defined
+2025-08-29 14:34:31 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 14:34:31 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 14:34:31 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:34:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:34:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:34:31 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:34:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 14:34:31 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:34:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 14:34:31 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:34:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:34:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:34:31 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:34:31 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:34:31 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:34:31 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:34:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 14:34:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 14:34:31 - ERROR - spread today dashboard failed: product=cu, day=2025-08-27, err=name 'np' is not defined
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 314, in api_spread_today_dashboard
+    min_s = float(np.floor(np.nanmin(spread) / tick) * tick)
+NameError: name 'np' is not defined
+2025-08-29 14:51:07 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 14:51:07 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 14:51:07 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:51:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:51:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:51:08 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:51:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 14:51:08 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 14:51:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 14:51:08 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:51:08 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:51:08 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:51:08 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:51:08 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:51:08 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:51:08 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:51:08 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 14:51:08 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 14:51:08 - ERROR - spread today dashboard failed: product=cu, day=2025-08-27, err='DatetimeIndex' object has no attribute 'dt'
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 324, in api_spread_today_dashboard
+    df_trend['t'] = pd.to_datetime(df_trend.index).dt.tz_convert('Asia/Shanghai')
+AttributeError: 'DatetimeIndex' object has no attribute 'dt'
+2025-08-29 14:56:55 - ERROR - Uncaught exception
+Traceback (most recent call last):
+  File "E:\vue-admin-template\backend\app.py", line 46, in <module>
+    ts_crud = TimescaleCRUD(DATABASE_URL)
+  File "E:\vue-admin-template\backend\tools\timescaleManager.py", line 25, in __init__
+    Base.metadata.create_all(self.engine)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\sql\schema.py", line 5796, in create_all
+    bind._run_ddl_visitor(
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3238, in _run_ddl_visitor
+    with self.begin() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3228, in begin
+    with self.connect() as conn:
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3264, in connect
+    return self._connection_cls(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\base.py", line 3288, in raw_connection
+    return self.pool.connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 1268, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 169, in _do_get
+    self._dec_overflow()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\impl.py", line 166, in _do_get
+    return self._create_connection()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\util\langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\create.py", line 637, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+  File "C:\Users\24225\.conda\envs\TA\lib\site-packages\psycopg2\__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+KeyboardInterrupt
+2025-08-29 14:58:18 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 14:58:18 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 14:58:18 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 14:58:31 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:58:31 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:58:31 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:58:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:31 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:31 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:31 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:58:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:31 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:58:31 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:58:31 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:58:31 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:58:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:58:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:58:31 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:58:31 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:58:31 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:58:45 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:58:45 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:58:45 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:58:45 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:45 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:45 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:45 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:45 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:45 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:45 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:58:45 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:45 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:45 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:58:45 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:58:45 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:58:45 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:58:46 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:58:46 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:58:46 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:58:46 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:58:46 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:58:47 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:58:47 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:58:47 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:58:47 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:47 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:47 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:47 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:47 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:47 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:47 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:58:47 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:47 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:47 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:58:47 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:58:47 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:58:47 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:58:47 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:58:47 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:58:47 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:58:47 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:58:47 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:58:52 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:58:52 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:58:52 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:58:52 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:52 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:58:52 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:52 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:52 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:58:52 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:58:52 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:58:52 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:52 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:58:52 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:58:52 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:58:52 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:58:52 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:58:52 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:58:52 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:58:52 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:58:52 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:58:52 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:59:03 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:59:03 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:59:03 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:59:03 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:03 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:03 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:03 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:03 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:03 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:03 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:59:03 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:03 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:03 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:59:03 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:59:03 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:59:03 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:59:03 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:59:03 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:59:03 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:59:03 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:59:03 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:59:11 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:59:11 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:59:11 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:59:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:11 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:11 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:11 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:59:11 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:11 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:11 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:59:11 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:59:11 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:59:11 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:59:11 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:59:11 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:59:11 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:59:11 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:59:11 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 14:59:35 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 14:59:35 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 14:59:35 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 14:59:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 14:59:35 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:35 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 14:59:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 14:59:35 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 14:59:35 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:35 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 14:59:35 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 14:59:35 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 14:59:35 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 14:59:35 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 14:59:35 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 14:59:35 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 14:59:35 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 14:59:35 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 14:59:35 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:00:10 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:00:10 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:00:10 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:00:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:00:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:00:11 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:00:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:00:11 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:00:11 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:00:11 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:00:11 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:00:11 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:00:11 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:00:11 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:00:11 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:00:11 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:00:11 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:00:11 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:00:11 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:00:11 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:00:11 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:10:59 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:10:59 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:10:59 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:10:59 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:10:59 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:10:59 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:10:59 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:10:59 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:10:59 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:10:59 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:10:59 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:00 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:00 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:11:00 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:11:00 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:11:00 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:11:00 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:11:00 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:11:00 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:11:00 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:11:00 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:11:00 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:11:00 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:11:00 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:11:08 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:11:08 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:11:08 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:11:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:08 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:08 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:08 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:08 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:11:08 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:08 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:08 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:11:08 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:11:08 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:11:08 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:11:08 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:11:08 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:11:08 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:11:08 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:11:08 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:11:31 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:11:31 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:11:31 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:11:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:31 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:31 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:31 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:31 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:11:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:31 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:31 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:11:31 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:11:31 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:11:31 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:11:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:11:31 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:11:31 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:11:31 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:11:31 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:11:58 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:11:58 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:11:58 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:11:58 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:58 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:11:58 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:58 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:58 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:11:58 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:11:58 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:11:58 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:58 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:11:58 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:11:58 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:11:58 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:11:58 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:11:58 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:11:59 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:11:59 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:11:59 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:11:59 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:12:10 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:12:10 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:12:10 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:12:10 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:12:10 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:12:10 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:12:10 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:12:10 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:12:10 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:12:10 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:12:10 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:12:10 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:12:10 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:12:10 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:12:10 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:12:10 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:12:10 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:12:11 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:12:11 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:12:11 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:12:11 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:18:43 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:18:43 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:18:43 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:18:43 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:18:43 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:18:43 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:22:39 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:22:39 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:22:39 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:22:39 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:22:39 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:22:39 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:22:39 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:22:39 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:22:39 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:22:39 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:22:39 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:22:39 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:22:39 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:22:39 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:22:39 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:22:39 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:22:39 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:22:39 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:22:39 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:22:39 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:22:39 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:23:14 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:23:14 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:23:14 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:26:43 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:26:43 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:26:43 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:27:01 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:27:01 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:27:01 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:30:23 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:30:23 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:30:23 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:30:31 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:30:31 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:30:31 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:32:08 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:32:08 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:32:08 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:33:27 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:33:27 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:33:27 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:33:48 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:33:48 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:33:48 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:02 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:02 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:34:02 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:16 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:16 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:34:16 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:20 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:20 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:34:20 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:34 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:34 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:34:34 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:50 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:34:50 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:34:50 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:36:24 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:36:24 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:36:24 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:36:29 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:36:29 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:36:29 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:36:29 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:36:29 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:36:29 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:36:29 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:36:29 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:36:29 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:36:29 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:36:29 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:36:29 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:36:29 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:36:29 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:36:29 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:36:29 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:36:29 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:36:29 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:36:29 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:36:29 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:36:29 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:36:35 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:36:35 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:36:35 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:36:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:36:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:36:35 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:36:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:36:35 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:36:35 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:36:35 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:36:35 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:36:35 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:36:35 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:36:35 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:36:35 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:36:35 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:36:35 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:36:35 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:36:35 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:36:35 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:36:35 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:40:18 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:40:18 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:40:18 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:40:18 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:40:18 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:40:18 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:40:18 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:40:18 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:40:18 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:40:18 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:40:18 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:40:18 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:40:18 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:40:18 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:40:18 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:40:18 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:40:18 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:40:18 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:40:18 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:40:18 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:40:18 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:40:57 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:40:57 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:40:57 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:46:21 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:46:21 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:46:21 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:51:32 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:51:32 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:51:32 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:51:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:51:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:51:32 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:51:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:51:32 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:51:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:51:32 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:51:32 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:51:32 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:51:32 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:51:32 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:51:32 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:51:32 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:51:32 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:51:32 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:51:32 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:51:32 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:51:32 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:52:08 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:52:08 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:52:08 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:52:23 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:52:23 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:52:23 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:57:57 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:57:57 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:57:57 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:57:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:57:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:57:57 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:57:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:57:57 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:57:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:57:57 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:57:57 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:57:57 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:57:57 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:57:57 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:57:57 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:57:57 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:57:57 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:57:57 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:57:57 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:57:57 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:57:57 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:58:06 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 15:58:06 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 15:58:06 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:58:06 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:58:06 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:58:06 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 15:58:06 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 15:58:06 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 15:58:06 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 15:58:06 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:58:06 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:58:06 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:58:06 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:58:06 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:58:06 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:58:06 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:58:06 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 15:58:06 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 15:58:06 - INFO - 📉 单腿波动率计算: 波动率=13.672860, 样本数=444
+2025-08-29 15:58:06 - INFO - 📉 单腿波动率计算: 波动率=12.821288, 样本数=444
+2025-08-29 15:58:06 - INFO - 📊 价差波动率计算成功: 波动率=7.283330, 样本数=444
+2025-08-29 15:58:48 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:58:48 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:58:48 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:59:07 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-27
+2025-08-29 15:59:07 - INFO - 主次合约获取成功: product=cu, date=2025-08-27, main=cu2510, sub=cu2509
+2025-08-29 15:59:07 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:07 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:07 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:07 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 15:59:07 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-26
+2025-08-29 15:59:07 - INFO - 使用前一交易日: 原始=2025-08-27, 前一日=2025-08-26
+2025-08-29 15:59:07 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-26
+2025-08-29 15:59:07 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:07 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:07 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:07 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:07 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:07 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:07 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:07 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-28~2025-08-27, 平均=36737, 有效天数=23
+2025-08-29 15:59:07 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-28~2025-08-27, 平均=54971, 有效天数=23
+2025-08-29 15:59:07 - INFO - 📉 单腿波动率计算: 波动率=13.672860, 样本数=444
+2025-08-29 15:59:07 - INFO - 📉 单腿波动率计算: 波动率=12.821288, 样本数=444
+2025-08-29 15:59:07 - INFO - 📊 价差波动率计算成功: 波动率=7.283330, 样本数=444
+2025-08-29 15:59:16 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:59:16 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 15:59:16 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29
+2025-08-29 15:59:21 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:59:21 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:59:21 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:21 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:21 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:21 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:21 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:21 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:21 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:21 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:21 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:21 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:21 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:21 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:21 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:21 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:21 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:59:21 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:59:21 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:59:21 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:59:21 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:59:27 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:59:27 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:59:27 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:27 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:27 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:27 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:27 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:27 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:27 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:27 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:27 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:27 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:27 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:27 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:27 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:27 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:27 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:59:27 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:59:27 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:59:27 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:59:27 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:59:36 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:59:36 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:59:36 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:36 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:36 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:36 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:36 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:36 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:36 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:36 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:36 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:36 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:36 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:36 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:36 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:36 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:36 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:59:36 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:59:36 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:59:36 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:59:36 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:59:49 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:59:49 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:59:49 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:49 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:49 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:49 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:49 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:49 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:49 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:49 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:49 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:49 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:49 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:49 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:49 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:49 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:49 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:59:49 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:59:49 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:59:49 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:59:49 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 15:59:57 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 15:59:57 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 15:59:57 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 15:59:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 15:59:57 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:57 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 15:59:57 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 15:59:57 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 15:59:57 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:57 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 15:59:57 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 15:59:57 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 15:59:57 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 15:59:57 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 15:59:57 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 15:59:57 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 15:59:57 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 15:59:57 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 15:59:57 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 16:00:32 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-28
+2025-08-29 16:00:32 - INFO - 主次合约获取成功: product=cu, date=2025-08-28, main=cu2510, sub=cu2509
+2025-08-29 16:00:32 - INFO - 主力合约=cu2510, 次主力合约=cu2509
+2025-08-29 16:00:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-28
+2025-08-29 16:00:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-28
+2025-08-29 16:00:32 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 16:00:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2510, 行数=465, 日期=2025-08-27
+2025-08-29 16:00:32 - INFO - 使用前一交易日: 原始=2025-08-28, 前一日=2025-08-27
+2025-08-29 16:00:32 - INFO - ✅ 加载分钟数据成功: 合约=cu2509, 行数=465, 日期=2025-08-27
+2025-08-29 16:00:32 - INFO - 数据加载成功: 品种=cu, 主力行数=471, 次主力行数=471
+2025-08-29 16:00:32 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 16:00:32 - INFO - 🧹 交易时段过滤: 原始=471 行，保留=446 行，过滤=25 行
+2025-08-29 16:00:32 - INFO - ✅ Tick Size 获取成功: 合约=cu2510, tick_size=10.0
+2025-08-29 16:00:32 - INFO - ⌛ 时间戳对齐检查: 主力=446 次主力=446 共有=446 总计=446
+2025-08-29 16:00:32 - INFO - ✅ 合并成功: 行数=446
+2025-08-29 16:00:32 - INFO - 🚫 涨跌停屏蔽: 主力=0 分钟, 次主力=0 分钟, 总计=0
+2025-08-29 16:00:32 - INFO - ✅ 平均成交量查询成功: 合约=cu2510, 区间=2025-07-29~2025-08-28, 平均=38765, 有效天数=23
+2025-08-29 16:00:32 - INFO - ✅ 平均成交量查询成功: 合约=cu2509, 区间=2025-07-29~2025-08-28, 平均=53369, 有效天数=23
+2025-08-29 16:00:32 - INFO - 📉 单腿波动率计算: 波动率=12.409516, 样本数=444
+2025-08-29 16:00:32 - INFO - 📉 单腿波动率计算: 波动率=11.110908, 样本数=444
+2025-08-29 16:00:32 - INFO - 📊 价差波动率计算成功: 波动率=7.511676, 样本数=444
+2025-08-29 16:05:21 - INFO - 加载主次主力合约: 品种=cu, 交易日=2025-08-29
+2025-08-29 16:05:21 - WARNING - [当日合约] 查询为空: product=cu, date=2025-08-29
+2025-08-29 16:05:21 - WARNING - 主/次主力合约未找到: 品种=cu, 交易日=2025-08-29

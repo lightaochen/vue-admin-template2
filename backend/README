@@ -1,0 +1,86 @@
+backend/
+├─ app/
+│  ├─ __init__.py               # 应用工厂 create_app，注册扩展 & 蓝图 & 错误处理
+│  ├─ config.py                 # 配置类（Dev/Prod/Test），读取环境变量
+│  ├─ extensions.py             # 第三方扩展实例：db、cors、redis、logger、TimescaleCRUD...
+│  ├─ models/                   # SQLAlchemy 模型
+│  │   ├─ __init__.py
+│  │   ├─ user.py               # User 模型
+│  │   └─ trading.py            # ChinaTradingDay / Bars / Daybar / BaseInfo（如果你需要）
+│  ├─ utils/
+│  │   ├─ jwt_utils.py          # 生成/校验 JWT
+│  │   ├─ response.py           # make_ok / make_err
+│  │   ├─ time_utils.py         # 与时区、交易日判断等工具
+│  │   └─ cache.py              # Redis 基建、键规则、分布式锁、df pack/unpack
+│  ├─ services/
+│  │   ├─ spread_service.py     # 业务核心（加载数据、对齐、指标、直方图、缓存包装）
+│  │   └─ contract_service.py   # 合约筛选、默认近远月、历史日序列计算
+│  ├─ blueprints/
+│  │   ├─ __init__.py
+│  │   ├─ auth.py               # /user/* 登录/信息/登出
+│  │   ├─ spread_today.py       # /spread/today/* 路由（调用 services）
+│  │   ├─ spread_history.py     # /spread/history/* 路由
+│  │   └─ contracts.py          # /spread/contracts 路由
+│  ├─ errors.py                 # 全局错误处理（404/405/统一返回）
+│  └─ seed.py                   # init_db_and_seed（初始化 admin 账号）
+├─ tools/
+│  └─ timescaleManager.py       # 你已有的 TimescaleCRUD
+├─ tradeAssistantSpread.py      # 你已有的算法方法（保持不动）
+├─ config/
+│  └─ settings.py               # 你已有的常量（如 SESSION 规则），逐步迁到 app/config.py
+├─ run.py                       # 启动入口（调用 create_app）
+└─ wsgi.py                      # 部署入口（gunicorn/uwsgi）
+
+先不动你的算法文件（tradeAssistantSpread.py）与现有模型导入路径，减少改动面；
+
+与数据库强相关的“读/写/聚合”放在 services；路由只做参数解析与调用；
+
+Redis 缓存基建放到 utils/cache.py 统一复用（键生成、分布式锁、TTL 规则、DataFrame 序列化）；
+
+config.py 统一读取环境变量，便于本地/云端切换。
+
+三、迁移要点（避免大面积爆红）
+
+最小化修改：
+
+你的算法文件 tradeAssistantSpread.py、Timescale 模型 models.models 先不动；
+
+在 services/spread_service.py 里 from models.models import ... 继续沿用；
+
+仅把“路由函数体”拆出来，封装为 today_dashboard(args)、prepare_main_sub(args) 等。
+
+依赖注入：
+
+Timescale 实例：从 app.extensions 导入 ts_crud / timescale_crud；
+
+Redis：从 app.extensions 导入 rds；
+
+缓存工具：用 app.utils.cache 提供的 build_key / cache_get_bytes / cache_set_bytes / RedisLock / ttl_by_trading_day。
+
+配置集中：
+
+.env 或环境变量注入 DB_URI / DATABASE_URL / REDIS_URL / SECRET_KEY；
+
+本地/生产只换 FLASK_ENV 即可切配置。
+
+返回统一：
+
+所有接口统一 make_ok / make_err；
+
+全局 404/405 在 errors.py。
+
+CORS/池子/日志：
+
+仍在 extensions.py 里初始化；
+
+你原先的 systemLogger 继续保留（或直接用 current_app.logger）。
+
+四、你现在要做的最少工作
+
+按上面的目录把文件建起来。
+
+把你 app.py 里 路由以外 的大段逻辑复制到 services/spread_service.py，把 import 换到新路径（见上文注释）。
+
+把每个路由搬到对应的 Blueprint，并在 services 里调用封装好的函数。
+
+用 python run.py 启动，功能保持不变，但代码清晰很多。
